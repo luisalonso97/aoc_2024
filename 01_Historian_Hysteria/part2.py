@@ -11,7 +11,6 @@ sys.path.append(os.path.abspath(".."))
 import functools as ft
 import utils.file_reader as fr
 
-
 def get_similarity_score(a, x):
   if x in a:
     a[x] = a[x] + 1
