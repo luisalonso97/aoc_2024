@@ -35,7 +35,7 @@ def ans_reduce(a, x):
   return a
 
 if __name__ == "__main__":
-  parse_exp = re.compile(r"mul\((?P<mul_1>\d{1,3}),(?P<mul_2>\d{1,3})\)|(?P<do_flg>do\(\))|(?P<dont_flg>don't\(\))")
+  parse_exp = re.compile(r"mul\((\d{1,3}),(\d{1,3})\)|(do\(\))|(don't\(\))")
   puzzle_data = fr.read_file("../puzzle_inputs/03.dat", parse_exp, re.findall)
 
   pzzl_ans = ft.reduce(ans_reduce, puzzle_data, [0, True])
