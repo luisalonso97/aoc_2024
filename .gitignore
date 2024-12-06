@@ -1,3 +1,5 @@
 **/puzzle_inputs/**
 **/**.pyc
 **/.vscode
+**/venv/**
+**/tests/**
