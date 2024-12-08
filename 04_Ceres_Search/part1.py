@@ -24,7 +24,9 @@ def build_diagonals(walk, N):
   diagonals = []
   aux_len = len(walk)
   for take in range(N):
+    # from 0 to take
     diagonals.append(walk[0:take + 1])
+    # from len - take - 1 to len - 1
     diagonals.append(walk[aux_len - take - 1:aux_len])
     walk = walk[take + 1:aux_len - take - 1]
     aux_len = len(walk)
@@ -40,7 +42,6 @@ def build_diag_strs(diagonals, data):
   ]
 
 def find_xmas(x):
-  # Regex search
   SEARCH = r"(?=(XMAS)|(SAMX))"
   find = re.compile(SEARCH)
   return len(find.findall("".join(x)))
