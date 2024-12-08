@@ -34,7 +34,7 @@ if __name__ == "__main__":
   for y in range(1, N - 1):
     for x in range(1, N - 1):
       if puzzle_data[x, y] == "A":
-        if check_sub_matrix(puzzle_data[x - 1:x + 2, y - 1: y + 2]):
+        if check_sub_matrix(puzzle_data[x - 1:x + 2, y - 1:y + 2]):
           n_x_mas += 1
 
 print(n_x_mas)
